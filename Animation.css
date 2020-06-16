@@ -3,9 +3,10 @@ body {
 }
 
 .middle {
-  width: 1440px;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   background-color: red;
+  transition: height 2s, width 6s, background-color 4s; /*ставим время, попробовать вставить картинку*/
 }
 
 @media screen and (max-width: 768px) {
@@ -13,4 +14,30 @@ body {
     width: 500px;
     background-color: green;
   }
+}
+
+.middle:hover {
+  height: 400px;
+  width: 1440px;
+  background-color: yellow;
+}
+
+#animated{
+  width: 60px;
+  height: 60px;
+  background-color: blue;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes example {
+  0%   {background-color:red; margin-left:0px; margin-top:0px;}
+  25%  {background-color:yellow; margin-left:200px; margin-top:0px;}
+  50%  {background-color:blue; margin-left:200px; margin-top:200px;}
+  75%  {background-color:green; margin-left:0px; margin-top:200px;}
+  100% {background-color:red; margin-left:0px; margin-top:0px;}
+ 
 }
